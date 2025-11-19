@@ -164,5 +164,12 @@ void TampilDataLengkap(const Mahasiswa mhs[], int jumlahMhs) {
     }
 }
 
-
+// 5. TampilRanking
+void TampilRanking(const Mahasiswa mhs[], int jumlahMhs) {
+    cout << "\n--- Peringkat Mahasiswa ---\n";
+    for (int i = 0; i < jumlahMhs; i++) {
+        cout << mhs[i].ranking << ". " << mhs[i].nama 
+             << " (" << fixed << setprecision(2) << mhs[i].nilaiAkhir << ")\n";
+    }
+}
 
