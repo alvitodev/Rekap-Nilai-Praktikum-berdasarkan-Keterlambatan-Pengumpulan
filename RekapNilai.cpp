@@ -173,3 +173,32 @@ void TampilRanking(const Mahasiswa mhs[], int jumlahMhs) {
     }
 }
 
+// 6. CariMahasiswa (Sequential Search)
+void CariMahasiswa(const Mahasiswa mhs[], int jumlahMhs) {
+    string keyword;
+    cout << "\nMasukkan NIM atau Nama yang dicari: ";
+    getline(cin, keyword); // ambil input termasuk spasi
+
+    bool ditemukan = false;
+    int i = 0;
+
+    // sequential search berdasarkan NIM atau Nama
+    while (i < jumlahMhs && !ditemukan) {
+        if (mhs[i].nim == keyword || mhs[i].nama == keyword) {
+            ditemukan = true;
+        } else {
+            i++;
+        }
+    }
+
+    if (ditemukan) {
+        cout << "\nData Ditemukan:\n";
+        cout << "Ranking : " << mhs[i].ranking << endl;
+        cout << "NIM     : " << mhs[i].nim << endl;
+        cout << "Nama    : " << mhs[i].nama << endl;
+        cout << "Status  : " << mhs[i].statusKeterlambatan << endl;
+        cout << "Nilai   : " << fixed << setprecision(2) << mhs[i].nilaiAkhir << endl;
+    } else {
+        cout << "\nData dengan kata kunci '" << keyword << "' tidak ditemukan.\n";
+    }
+}
