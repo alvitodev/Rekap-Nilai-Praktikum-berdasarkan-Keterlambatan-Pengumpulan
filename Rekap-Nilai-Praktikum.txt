@@ -1,5 +1,4 @@
-//uca cobaa push
-//coba editt
+//contoh data
 No,Nama Mahasiswa,NIM,Tugas 1,Tugas 2,Praktikum,Keterlambatan (hari),Nilai Akhir
 1,Andi Saputra,12345678,80,85,90,0,88
 2,Budi Santoso,12345679,75,80,85,1,80
