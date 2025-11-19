@@ -1,6 +1,6 @@
 #include <iostream>
 #include <limits>      // buat numeric_limits
-#include "Mahasiswa.h" // file header untuk struct dan deklarasi fungsi
+#include "RekapNilai.h" // file header untuk struct dan deklarasi fungsi
 using namespace std;
 
 int main() {
