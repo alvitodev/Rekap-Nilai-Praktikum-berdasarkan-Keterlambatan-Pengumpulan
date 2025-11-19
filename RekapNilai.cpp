@@ -98,6 +98,31 @@ void InputData(Mahasiswa mhs[], int &jumlahMhs) {
     }
 }
 
+// 2. HitungNilai
+void HitungNilai(Mahasiswa mhs[], int jumlahMhs) {
+    for (int i = 0; i < jumlahMhs; i++) {
+        int hari = mhs[i].hariTerlambat;
+        double potongan = 0;
+
+        // percabangan untuk menentukan potongan nilai
+        if (hari == 0) {
+            potongan = 0;
+            mhs[i].statusKeterlambatan = "Tepat Waktu";
+        } else if (hari >= 1 && hari <= 2) {
+            potongan = 0.10 * NILAI_AWAL_DEFAULT; // 10%
+            mhs[i].statusKeterlambatan = "Terlambat (1-2 hr)";
+        } else if (hari >= 3 && hari <= 5) {
+            potongan = 0.25 * NILAI_AWAL_DEFAULT; // 25%
+            mhs[i].statusKeterlambatan = "Terlambat (3-5 hr)";
+        } else {
+            // Lebih dari 5 hari
+            potongan = 0.50 * NILAI_AWAL_DEFAULT; // 50%
+            mhs[i].statusKeterlambatan = "Terlambat (>5 hr)";
+        }
+
+        mhs[i].nilaiAkhir = NILAI_AWAL_DEFAULT - potongan;
+    }
+}
 
 
 
