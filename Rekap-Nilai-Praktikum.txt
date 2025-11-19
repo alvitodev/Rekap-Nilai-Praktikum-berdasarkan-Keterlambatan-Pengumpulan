@@ -1,7 +1,42 @@
-//contoh data
-No,Nama Mahasiswa,NIM,Tugas 1,Tugas 2,Praktikum,Keterlambatan (hari),Nilai Akhir
-1,Andi Saputra,12345678,80,85,90,0,88
-2,Budi Santoso,12345679,75,80,85,1,80
-3,Citra Lestari,12345680,90,88,92,0,90
-4,Deni Prasetyo,12345681,60,70,65,2,63
-5,Eka Wulandari,12345682,85,90,88,0,88
+Format:
+NIM | Nama | Hari Terlambat
+
+Normal Case
+101 | Andi Pratama      | 0
+102 | Budi Santoso      | 2
+103 | Citra Lestari     | 5
+104 | Dimas Riyadi      | 1
+105 | Eka Maharani      | 3
+
+Edge Case
+201 | Farhan Nur        | 10     (terlambat >5 hari)
+202 | Gina Fadhila      | 0      (tepat waktu)
+203 | Hana Putri        | 7      (terlambat >5 hari)
+
+Validasi Input (untuk testing error)
+Ini tidak digunakan sebagai data utama, tapi untuk uji error handling.
+
+NIM Duplikat
+301 | Kevin Surya       | 0
+301 | Kevin Surya       | 1     (duplikat)
+
+Nama Berisi Angka
+401 | 12345             | 2
+
+Hari Negatif
+501 | Putra Adi         | -3
+
+Hari Kosong / Tidak Numerik (untuk manual testing)
+601 | Lala Safitri      | abc
+
+OUTPUT YANG DIHARAPKAN (Setelah Sorting & Hitung Nilai)
+Rank | NIM   | Nama            | Status              | Nilai
+--------------------------------------------------------------
+1    | 101   | Andi Pratama    | Tepat Waktu         | 100.00
+2    | 102   | Budi Santoso    | Terlambat (1-2 hr)  | 90.00
+3    | 105   | Eka Maharani    | Terlambat (3-5 hr)  | 75.00
+4    | 103   | Citra Lestari   | Terlambat (3-5 hr)  | 75.00
+5    | 104   | Dimas Riyadi    | Terlambat (1-2 hr)  | 90.00
+6    | 201   | Farhan Nur      | Terlambat (>5 hr)   | 50.00
+7    | 203   | Hana Putri      | Terlambat (>5 hr)   | 50.00
+8    | 202   | Gina Fadhila    | Tepat Waktu         | 100.00
