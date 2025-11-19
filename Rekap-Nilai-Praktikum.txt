@@ -1,0 +1,7 @@
+//uca cobaa push
+No,Nama Mahasiswa,NIM,Tugas 1,Tugas 2,Praktikum,Keterlambatan (hari),Nilai Akhir
+1,Andi Saputra,12345678,80,85,90,0,88
+2,Budi Santoso,12345679,75,80,85,1,80
+3,Citra Lestari,12345680,90,88,92,0,90
+4,Deni Prasetyo,12345681,60,70,65,2,63
+5,Eka Wulandari,12345682,85,90,88,0,88
