@@ -124,6 +124,25 @@ void HitungNilai(Mahasiswa mhs[], int jumlahMhs) {
     }
 }
 
+// 3. UrutkanData (Bubble Sort Descending)
+void UrutkanData(Mahasiswa mhs[], int jumlahMhs) {
+    // sorting nilai akhir secara menurun
+    for (int i = 0; i < jumlahMhs - 1; i++) {
+        for (int j = 0; j < jumlahMhs - i - 1; j++) {
+            if (mhs[j].nilaiAkhir < mhs[j + 1].nilaiAkhir) {
+                //swap
+                Mahasiswa temp = mhs[j];
+                mhs[j] = mhs[j + 1];
+                mhs[j + 1] = temp;
+            }
+        }
+    }
+
+    // update ranking setelah data terurut
+    for (int i = 0; i < jumlahMhs; i++) {
+        mhs[i].ranking = i + 1;
+    }
+}
 
 
 
