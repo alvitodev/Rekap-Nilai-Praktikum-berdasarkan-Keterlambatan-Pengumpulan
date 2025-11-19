@@ -144,6 +144,25 @@ void UrutkanData(Mahasiswa mhs[], int jumlahMhs) {
     }
 }
 
+// 4. TampilDataLengkap
+void TampilDataLengkap(const Mahasiswa mhs[], int jumlahMhs) {
+    cout << "\n--- Daftar Nilai Lengkap Mahasiswa ---\n";
+    cout << left << setw(5) << "Rank" 
+         << left << setw(15) << "NIM" 
+         << left << setw(25) << "Nama" 
+         << left << setw(20) << "Status" 
+         << left << setw(10) << "Nilai" << endl;
+    cout << string(75, '-') << endl; 
+
+    // loop tabel data
+    for (int i = 0; i < jumlahMhs; i++) {
+        cout << left << setw(5) << mhs[i].ranking
+             << left << setw(15) << mhs[i].nim
+             << left << setw(25) << mhs[i].nama
+             << left << setw(20) << mhs[i].statusKeterlambatan
+             << left << setw(10) << fixed << setprecision(2) << mhs[i].nilaiAkhir << endl;
+    }
+}
 
 
 
