@@ -82,7 +82,6 @@ BEGIN
     UNTIL (ISNUMERIC(JumlahMahasiswa) = TRUE) AND (JumlahMahasiswa > 0)
 
     // Alokasikan memori untuk array berdasarkan JumlahMahasiswa
-    // (Langkah ini implisit dalam pseudocode)
 
     FOR i <- 1 TO JumlahMahasiswa DO
         DISPLAY "--- Data Mahasiswa ke-", i, " ---"
